@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="static/style.css">
+        <title>Predictor</title>
+
+        <style>
+            body {
+              background-image: url('static/image/img_v.png');
+              background-repeat: no-repeat;
+              background-attachment: fixed;
+              background-size: 100% 100%;
+            }
+            </style>
+
+
+
+
+</head>
+<body>
+    
+    
+
+
+
+   <div class="wrapper">
+       <div class="title"> Vehicle Price Predictor </div>
+
+      
+
+      <form action="/" method="POST">
+        <div class="form">
+       
+
+        <div class="inputfield">
+            <label for="Brand">Brand</label>
+            <div class="custom_select">
+                <select name="Brand" id="Brand">
+                    <option value=""selected hidden>Select</option>
+                    <option value="Bajaj">Bajaj</option>
+                    <option value="Honda">Honda</option>
+                    <option value="Nissan">Nissan</option>
+                    <option value="other">Other</option>
+                    <option value="Suzuki">Suzuki</option>
+                    <option value="Toyota">Toyota</option>
+                </select>
+                </div>
+                </div>
+
+        <div class="inputfield">
+            <label for="Year">Year</label>
+            <input type="text" class="input" name="Year">
+        </div>
+
+        <div class="inputfield">
+            <label for="Condition">Condition</label>
+            <div class="custom_select">
+                <select name="Condition" id="Condition">
+                    <option value=""selected hidden>Select</option>
+                    <option value="used">Used</option>
+                    <option value="reconditioned">Reconditioned</option>
+                    <option value="new">New</option>
+                    <option value="other">Other</option>
+                </select>
+                </div>
+                </div>
+
+                <div class="inputfield">
+                    <label for="Transmission">Transmission</label>
+                    <div class="custom_select">
+                        <select name="Transmission" id="Transmission">
+                            <option value=""selected hidden>Select</option>
+                            <option value="auto">Automatic</option>
+                            <option value="manual">Manual</option>
+                            <option value="tiptonic">Tiptronic</option>
+                            <option value="other">Other</option>
+                            <option value="other transmission">Other transmission</option>
+                        </select>
+                        </div>
+                        </div>
+
+                        <div class="inputfield">
+                            <label for="Fuel">Fuel</label>
+                            <div class="custom_select">
+                                <select name="Fuel" id="Fuel">
+                                    <option value=""selected hidden>Select</option>
+                                    <option value="diesel">Diesel</option>
+                                    <option value="petrol">Petrol</option>
+                                    <option value="hybrid">Hybrid</option>
+                                    <option value="other">Other</option>
+                                    <option value="electric">Electric</option>
+                                </select>
+                                </div>
+                                </div>
+        
+
+        <div class="inputfield">
+            <input type="submit" class="btn" value="Predict Price">
+            </div>
+
+        </form>
+        <div class="result">
+            {% if pred_value != 0 %}
+            <p>
+               Estimated price : LKR {{pred_value}}
+            </p>
+            {% endif %}
+        </div>
+ </div>
+</body>
+</html>
